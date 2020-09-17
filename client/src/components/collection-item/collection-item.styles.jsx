@@ -8,6 +8,7 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+  margin-top: 15px;
 
   &:hover {
     .image {
@@ -68,11 +69,65 @@ export const CollectionFooterContainer = styled.div`
 `;
 
 export const NameContainer = styled.span`
-  width: 90%;
+  width: auto;
   margin-bottom: 15px;
 `;
 
 export const PriceContainer = styled.span`
-  width: 10%;
+  width: auto;
   text-align: right;
 `;
+
+export const CustomSpec = styled.span`
+  width: 80%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border-top: ridge;
+  
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0;
+    min-width: unset;
+    padding: 0 10px;
+  }
+`;
+
+export const CustomLT = styled.span`
+  width: 20%;
+  text-align: right;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border-top: ridge;
+
+  @media screen and (max-width: 800px) {
+    opacity: 0;
+    min-width: unset;
+    padding: 0 10px;
+  }
+`;
+
+
+
+// export const CustomSpec = styled.span`
+//     display: flex;
+//     justify-content: space-between;
+//     font-size: 15px;
+//     margin-top: 15px;
+//     border-top: ridge;
+//     width: 80%;
+//     margin-right: auto;
+//     font-weight: bold;
+
+//     @media screen and (max-width: 800px) {
+//       display: block;
+//       opacity: 0.9;
+//       min-width: unset;
+//       padding: 0 10px;
+//     }
+    
+// `;
+
+

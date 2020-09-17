@@ -15,12 +15,16 @@ const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
-      <CollectionTitle>{title}</CollectionTitle>
+      <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
       <CollectionItemsContainer>
         {items.map(item => (
           <CollectionItem key={item.id} item={item} />
         ))}
       </CollectionItemsContainer>
+      <div className = "custom-specifications">
+        <span className = "details"> Specification details: <br/> {items.description} </ span>
+        <span className = "leadtime"> Availability: <br/> {items.availability}</ span>
+      </div>
     </CollectionPageContainer>
   );
 };
