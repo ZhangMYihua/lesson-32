@@ -110,24 +110,3 @@ export const CustomLT = styled.span`
 `;
 
 
-
-// export const CustomSpec = styled.span`
-//     display: flex;
-//     justify-content: space-between;
-//     font-size: 15px;
-//     margin-top: 15px;
-//     border-top: ridge;
-//     width: 80%;
-//     margin-right: auto;
-//     font-weight: bold;
-
-//     @media screen and (max-width: 800px) {
-//       display: block;
-//       opacity: 0.9;
-//       min-width: unset;
-//       padding: 0 10px;
-//     }
-    
-// `;
-
-

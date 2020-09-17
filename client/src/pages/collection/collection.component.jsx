@@ -21,10 +21,6 @@ const CollectionPage = ({ collection }) => {
           <CollectionItem key={item.id} item={item} />
         ))}
       </CollectionItemsContainer>
-      <div className = "custom-specifications">
-        <span className = "details"> Specification details: <br/> {items.description} </ span>
-        <span className = "leadtime"> Availability: <br/> {items.availability}</ span>
-      </div>
     </CollectionPageContainer>
   );
 };
