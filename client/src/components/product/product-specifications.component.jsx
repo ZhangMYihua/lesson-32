@@ -18,9 +18,7 @@ import {
   PriceContainer,
   CustomSpec,
   CustomLT
-} from './collection-item.styles';
-
-// import FurnitureSpecs from '../../components/product/furniture-specs.component'
+} from './product-specifications.styles';
 
 
 const CollectionItem = ({ item, addItem , history, match}) => {
@@ -42,6 +40,11 @@ const CollectionItem = ({ item, addItem , history, match}) => {
           Add to cart
         </AddButton>
         <CollectionFooterContainer>
+        <CustomSpec> 
+          Specification details: <br/> {item.description} 
+        </CustomSpec>
+        <CustomLT>Availability: <br/> {item.availability}
+        </CustomLT>
         </CollectionFooterContainer>
       </CollectionItemContainer>
 
