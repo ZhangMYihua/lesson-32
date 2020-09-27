@@ -14,9 +14,6 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
 
-import {NavbarHeader} from '../src/components/navbar/navbar.component'
-
-
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
     checkUserSession();
@@ -25,7 +22,6 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <div>
       <GlobalStyle />
-      {/* <NavbarHeader /> */}
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />

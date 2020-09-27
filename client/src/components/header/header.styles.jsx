@@ -18,7 +18,8 @@ export const HeaderContainer = styled.div`
 export const LogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
-  padding: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
 
   @media screen and (max-width: 800px) {
     width: 50px;
@@ -41,4 +42,9 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+`;
+
+export const SearchBar = styled.div`
+  padding: 25px;
+  justify-content: flex-end;
 `;

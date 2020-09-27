@@ -9,12 +9,14 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
 
 import {
   HeaderContainer,
   LogoContainer,
   OptionsContainer,
-  OptionLink
+  OptionLink,
+  SearchBar
 } from './header.styles';
 
 const Header = ({ currentUser, hidden, signOutStart }) => (
@@ -22,7 +24,14 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     <LogoContainer to='/'>
       <Logo className='logo' />
     </LogoContainer>
+    
     <OptionsContainer>
+    <SearchBar>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-info">Search</Button>
+    </Form>
+    </SearchBar>
       <OptionLink to='/'>SHOP</OptionLink>
       <OptionLink to='/shop'>CONTACT</OptionLink>
       {currentUser ? (
