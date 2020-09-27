@@ -12,7 +12,7 @@ import { GlobalStyle } from './global.styles';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
-
+import {ContactUs} from  './components/contact/contactus-component'
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -25,6 +25,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
+        <Route exact path='/contactus' component={ContactUs} />
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route

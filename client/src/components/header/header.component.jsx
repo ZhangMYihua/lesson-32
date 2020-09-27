@@ -32,8 +32,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
       <Button variant="outline-info">Search</Button>
     </Form>
     </SearchBar>
-      <OptionLink to='/'>SHOP</OptionLink>
-      <OptionLink to='/shop'>CONTACT</OptionLink>
+      <OptionLink to='/'>COLLECTIONS</OptionLink>
+      <OptionLink to='/contactus'>CONTACT US</OptionLink>
+      <OptionLink to='/shop'>SHOP</OptionLink>
       {currentUser ? (
         <OptionLink as='div' onClick={signOutStart}>
           SIGN OUT
