@@ -1,10 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  Router,
-  Switch,
-  Route,
-  Link,
   withRouter
 } from "react-router-dom";
 import { addItem } from '../../redux/cart/cart.actions';
@@ -16,40 +12,38 @@ import {
   BackgroundImage,
   NameContainer,
   PriceContainer,
-  CustomSpec,
-  CustomLT
-} from './product-specifications.styles';
-
+  CollectionSpecificationsContainer,
+  SpecDetailsContainer,
+  TitleContainer,
+  PriceSideContainer,
+  AddButtonv2,
+  ColorContainer,
+  ColorContainerSettings} from './product-specifications.styles';
 
 const CollectionItem = ({ item, addItem , history, match}) => {
   const { name, price, imageUrl} = item;
-  function newURL(){
-    history.push(`${match.url}/${name}`)
-  }
 
   return (
-    <div>
-      <CollectionItemContainer>
-        <BackgroundImage className='image' imageUrl={imageUrl} 
-        onClick={newURL}/>
-        <CollectionFooterContainer>
-          <NameContainer>{name}</NameContainer>
-          <PriceContainer>S${price}</PriceContainer>
-        </CollectionFooterContainer>
-        <AddButton onClick={() => addItem(item)} inverted>
-          Add to cart
-        </AddButton>
-        <CollectionFooterContainer>
-        <CustomSpec> 
-          Specification details: <br/> {item.description} 
-        </CustomSpec>
-        <CustomLT>Availability: <br/> {item.availability}
-        </CustomLT>
-        </CollectionFooterContainer>
+    <CollectionSpecificationsContainer>
+      <CollectionItemContainer> 
+      <BackgroundImage className='image' imageUrl={imageUrl} />
       </CollectionItemContainer>
-
-    </div>
-
+      <SpecDetailsContainer>
+        <TitleContainer>
+          {name}
+        </TitleContainer>
+        <PriceSideContainer>
+          S${price}
+        </PriceSideContainer>
+        <ColorContainerSettings>
+        <ColorContainer>Color: </ColorContainer>
+          Brown
+        </ColorContainerSettings>
+        <AddButtonv2 onClick = {() => addItem(item)}>
+          Add to cart
+        </AddButtonv2>
+      </SpecDetailsContainer>
+    </CollectionSpecificationsContainer>
   );
 };
 

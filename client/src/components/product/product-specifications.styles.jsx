@@ -1,14 +1,20 @@
 import styled from 'styled-components';
-import CustomButton from '../../components/custom-button/custom-button.component';
+import CustomButton from '../custom-button/custom-button.component';
+
+export const CollectionSpecificationsContainer = styled.div`
+  display: flex;
+  flex-direction: row; 
+  margin-left: 10vw;
+
+`
 
 export const CollectionItemContainer = styled.div`
-  width: 22vw;
+  width: 800px;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
   position: relative;
-  margin-top: 15px;
 
   &:hover {
     .image {
@@ -37,7 +43,7 @@ export const CollectionItemContainer = styled.div`
 `;
 
 export const AddButton = styled(CustomButton)`
-  width: 80%;
+  width: 60%;
   opacity: 0.7;
   position: absolute;
   top: 255px;
@@ -54,9 +60,9 @@ export const AddButton = styled(CustomButton)`
 export const BackgroundImage = styled.div`
   width: 100%;
   height: 95%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  margin-bottom: 5px;
+  background-repeat: no-repeat;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
@@ -78,35 +84,51 @@ export const PriceContainer = styled.span`
   text-align: right;
 `;
 
-export const CustomSpec = styled.span`
-  width: 80%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 15px;
-  font-weight: bold;
-  border-top: ridge;
-  
-  @media screen and (max-width: 800px) {
-    display: block;
-    opacity: 0;
-    min-width: unset;
-    padding: 0 10px;
-  }
+export const SpecDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  // margin: auto;
+  padding-left: 50px;
+`
+export const TitleContainer = styled.span`
+  width: 300px;
+  font-size: 25px;
+  padding-bottom: 10px;
 `;
 
-export const CustomLT = styled.span`
-  width: 20%;
-  text-align: right;
-  margin-top: 15px;
-  font-size: 15px;
+export const PriceSideContainer = styled.span`
+  width: 200px;
+  font-size: 25px;
+  color: #2F4F4F;
   font-weight: bold;
-  border-top: ridge;
+  padding-bottom: 20px;
+`
 
-  @media screen and (max-width: 800px) {
-    opacity: 0;
-    min-width: unset;
-    padding: 0 10px;
-  }
+export const AddButtonv2 = styled(CustomButton)`
+  opacity: 1;
+  top: 255px;
+  padding-bottom: 10px;
 `;
 
+export const ColorContainerSettings = styled.span`
+  flex-direction: row; 
+  display: flex;
+`
 
+export const ColorContainer = styled.span`
+  font-weight: bold;
+  padding-bottom: 10px;
+`
+
+// export const SizeContainer = styled.span`
+//   width: 300px;
+//   height: 95%;
+//   margin-left: 5px;
+//   margin-top: 15px;
+// `
+
+// export const HelpContainer = styled.span`
+//   width: 300px;
+//   height: 95%;
+//   margin-left: 5px;
+//   margin-top: 15px;

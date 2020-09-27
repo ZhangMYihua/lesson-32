@@ -1,10 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  Router,
-  Switch,
-  Route,
-  Link,
   withRouter
 } from "react-router-dom";
 import { addItem } from '../../redux/cart/cart.actions';
@@ -16,24 +12,21 @@ import {
   BackgroundImage,
   NameContainer,
   PriceContainer,
-  CustomSpec,
-  CustomLT
 } from './collection-item.styles';
-
-// import FurnitureSpecs from '../../components/product/furniture-specs.component'
 
 
 const CollectionItem = ({ item, addItem , history, match}) => {
   const { name, price, imageUrl} = item;
   function newURL(){
     history.push(`${match.url}/${name}`)
+    // window.open(`${match.url}/${name}`);window.open(`${match.url}`,'_self');
   }
 
   return (
     <div>
-      <CollectionItemContainer>
+      <CollectionItemContainer> 
         <BackgroundImage className='image' imageUrl={imageUrl} 
-        onClick={newURL}/>
+        onClick={newURL} />
         <CollectionFooterContainer>
           <NameContainer>{name}</NameContainer>
           <PriceContainer>S${price}</PriceContainer>
@@ -41,8 +34,6 @@ const CollectionItem = ({ item, addItem , history, match}) => {
         <AddButton onClick={() => addItem(item)} inverted>
           Add to cart
         </AddButton>
-        <CollectionFooterContainer>
-        </CollectionFooterContainer>
       </CollectionItemContainer>
 
     </div>

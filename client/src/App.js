@@ -13,11 +13,9 @@ import { GlobalStyle } from './global.styles';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-import FurnitureSpecs from './components/product/furniture-specs.component'
-import BasinSpecs from './components/product/basin-specs.component'
-import HomeDecor from './components/product/homedecor-specs.component'
-import SuppliesSpecs from './components/product/supplies-specs.component'
-import TapSpecs from './components/product/tap-specs.component'
+
+import {NavbarHeader} from '../src/components/navbar/navbar.component'
+
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -27,13 +25,10 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <div>
       <GlobalStyle />
+      {/* <NavbarHeader /> */}
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        {/* <Route exact path='/shop/supplies/:id' component={SuppliesSpecs} />
-        <Route exact path='/shop/basin/:id' component={BasinSpecs} />
-        <Route exact path='/shop/tap/:id' component={TapSpecs} />
-        <Route exact path='/shop/homedecor/:id' component={HomeDecor} /> */}
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route
