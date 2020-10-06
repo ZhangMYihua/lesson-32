@@ -14,6 +14,8 @@ import {
   PriceContainer,
 } from './collection-item.styles';
 
+import {popover} from '../popovers/popovers-component'
+import {OverlayTrigger} from 'react-bootstrap'
 
 const CollectionItem = ({ item, addItem , history, match}) => {
   const { name, price, imageUrl} = item;
@@ -31,9 +33,11 @@ const CollectionItem = ({ item, addItem , history, match}) => {
           <NameContainer>{name}</NameContainer>
           <PriceContainer>S${price}</PriceContainer>
         </CollectionFooterContainer>
-        <AddButton onClick={() => addItem(item)} inverted>
-          Add to cart
-        </AddButton>
+        <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+          <AddButton onClick={() => addItem(item)} inverted>
+            Add to cart
+          </AddButton>
+        </OverlayTrigger>
       </CollectionItemContainer>
 
     </div>

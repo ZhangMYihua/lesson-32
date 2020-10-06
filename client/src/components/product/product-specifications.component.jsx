@@ -7,11 +7,7 @@ import { addItem } from '../../redux/cart/cart.actions';
 
 import {
   CollectionItemContainer,
-  CollectionFooterContainer,
-  AddButton,
   BackgroundImage,
-  NameContainer,
-  PriceContainer,
   CollectionSpecificationsContainer,
   SpecDetailsContainer,
   TitleContainer,
@@ -19,6 +15,9 @@ import {
   AddButtonv2,
   ColorContainer,
   ColorContainerSettings} from './product-specifications.styles';
+
+import {popover} from '../popovers/popovers-component'
+import {OverlayTrigger} from 'react-bootstrap'
 
 const CollectionItem = ({ item, addItem , history, match}) => {
   const { name, price, imageUrl} = item;
@@ -39,9 +38,11 @@ const CollectionItem = ({ item, addItem , history, match}) => {
         <ColorContainer>Color: </ColorContainer>
           Brown
         </ColorContainerSettings>
-        <AddButtonv2 onClick = {() => addItem(item)}>
-          Add to cart
-        </AddButtonv2>
+        <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+          <AddButtonv2 onClick = {() => addItem(item)}>
+            Add to cart
+          </AddButtonv2>
+        </OverlayTrigger>
       </SpecDetailsContainer>
     </CollectionSpecificationsContainer>
   );

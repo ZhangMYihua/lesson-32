@@ -9,7 +9,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
-import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
+import {Form,FormControl,Button} from 'react-bootstrap';
 
 import {
   HeaderContainer,
