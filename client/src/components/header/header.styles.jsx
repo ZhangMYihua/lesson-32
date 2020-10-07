@@ -17,12 +17,12 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
   height: 100%;
-  width: 70px;
+  width: 10px;
   padding-top: 10px;
   padding-left: 10px;
 
   @media screen and (max-width: 800px) {
-    width: 50px;
+    width: 10px;
     padding: 0;
   }
 `;
@@ -45,6 +45,6 @@ export const OptionLink = styled(Link)`
 `;
 
 export const SearchBar = styled.div`
-  padding: 25px;
+  padding: 15px;
   justify-content: flex-end;
 `;
