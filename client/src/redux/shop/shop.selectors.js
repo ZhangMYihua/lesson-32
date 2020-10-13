@@ -29,8 +29,10 @@ export const selectIsCollectionsLoaded = createSelector(
   shop => !!shop.collections
 );
 
-export const selectCollectionProduct = (collectionUrlParam, itemId) =>
+export const selectCollectionProduct = (collectionUrlParam, collectionUrlParamName) =>
   createSelector(
     [selectCollections],
-    collections => (collections ? collections[collectionUrlParam] : null)
+    collections => (collections ? collections[collectionUrlParam]['items']
+    .filter(e => e.name === collectionUrlParamName) : null)
   );
+

@@ -10,13 +10,13 @@ const INITIAL_STATE = {
         title: 'Sanitary',
         imageUrl: 'https://i.ibb.co/CJ766jJ/Sanitary.jpg',
         id: 2,
-        linkUrl: 'shop/supplies'
+        linkUrl: 'shop/sanitary'
       },
       {
         title: 'Decoration',
         imageUrl: 'https://i.ibb.co/KWhFbnn/Decoration.jpg',
         id: 3,
-        linkUrl: 'shop/basin'
+        linkUrl: 'shop/decoration'
       }
     ]
 }

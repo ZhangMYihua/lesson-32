@@ -17,7 +17,7 @@ import {
 import {popover} from '../popovers/popovers-component'
 import {OverlayTrigger} from 'react-bootstrap'
 
-const CollectionItem = ({ item, addItem , history, match}) => {
+const OutdoorCollectionItem = ({ item, addItem , history, match}) => {
   const { name, price, imageUrl} = item;
   function newURL(){
     history.push(`${match.url}/${name}`)
@@ -51,4 +51,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   null,
   mapDispatchToProps
-)(CollectionItem));
+)(OutdoorCollectionItem));

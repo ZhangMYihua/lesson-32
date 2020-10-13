@@ -9,7 +9,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
-import {Form,FormControl,Button} from 'react-bootstrap';
+import {Form,FormControl,Button, NavDropdown} from 'react-bootstrap';
 
 import {
   HeaderContainer,
@@ -26,15 +26,19 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     </LogoContainer>
     
     <OptionsContainer>
-    <SearchBar>
+    {/* <SearchBar>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
       <Button variant="outline-info">Search</Button>
     </Form>
-    </SearchBar>
-      <OptionLink to='/'>COLLECTIONS</OptionLink>
+    </SearchBar> */}
+      <OptionLink to='/'>STORE</OptionLink>
       <OptionLink to='/contactus'>CONTACT US</OptionLink>
-      <OptionLink to='/shop'>SHOP</OptionLink>
+      <NavDropdown title="SHOP" id="basic-nav-dropdown">
+        <NavDropdown.Item href="/shop/furnitures">FURNITURES</NavDropdown.Item>
+        <NavDropdown.Item href="/shop/sanitary">SANITARY</NavDropdown.Item>
+        <NavDropdown.Item href="/shop/decoration">DECORATION</NavDropdown.Item>
+      </NavDropdown>
       {currentUser ? (
         <OptionLink as='div' onClick={signOutStart}>
           SIGN OUT

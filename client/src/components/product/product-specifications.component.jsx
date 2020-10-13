@@ -19,7 +19,7 @@ import {
 import {popover} from '../popovers/popovers-component'
 import {OverlayTrigger} from 'react-bootstrap'
 
-const CollectionItem = ({ item, addItem , history, match}) => {
+const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl} = item;
 
   return (

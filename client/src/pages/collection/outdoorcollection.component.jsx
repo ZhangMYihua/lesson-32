@@ -1,7 +1,7 @@
 import  React from 'react';
 import { connect } from 'react-redux';
 
-import CollectionItem from '../../components/collection-item/collection-item.component';
+import OutdoorCollectionItem from '../../components/collection-item/outdoor-collection-item.component';
 import { selectCollection } from '../../redux/shop/shop.selectors';
 import {
   CollectionPageContainer,
@@ -11,18 +11,20 @@ import {
 
 import {DropdownFilter} from '../../components/filterBar/Main.component';
 
-const CollectionPage = ({ collection , match}) => {
-  const { title, items} = collection;
+const OutdoorCollectionPage = ({ collection }) => {
+  const { title, items } = collection;
+  const getLastItem = `${window.location.href}`.substring(`${window.location.href}`.lastIndexOf('/') + 1)
+
   return (
     <CollectionPageContainer>
     <DropdownFilter collection = {collection}/>
       <CollectionTitle>{title.toUpperCase()} </CollectionTitle>
       <CollectionItemsContainer>
-      {/* {items.filter(item =>item.type=== "Indoor").map(filteredItem => 
-        <CollectionItem key={filteredItem.id} item={filteredItem} />)} */}
-        {items.map(item => (
-          <CollectionItem key={item.id} item={item} />
-        ))}
+      {items.filter(item =>item.type=== `${getLastItem}`).map(filteredItem => 
+        <OutdoorCollectionItem key={filteredItem.id} item={filteredItem} />)}
+        {/* {items.map(item => (
+          <OutdoorCollectionItem key={item.id} item={item} />
+        ))} */}
       </CollectionItemsContainer>
     </CollectionPageContainer>
   );
@@ -33,4 +35,4 @@ const mapStateToProps = (state, ownProps) => ({
   collection: selectCollection(ownProps.match.params.collectionId)(state),
 });
 
-export default connect(mapStateToProps)(CollectionPage);
+export default connect(mapStateToProps)(OutdoorCollectionPage);
