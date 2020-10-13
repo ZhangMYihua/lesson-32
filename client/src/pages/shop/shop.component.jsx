@@ -14,7 +14,7 @@ const ShopPage = ({ fetchCollectionsStart, match, collection }) => {
     fetchCollectionsStart();
   }, [fetchCollectionsStart]);
 
-  const filteroptions = ["Outdoor", "Indoor", "Blinds", "Light fitting", "Coloured face plate", "Gift items", "Sink", "W.C.", "New"]
+  const filteroptions = ["Outdoor", "Indoor", "Sofa", "Bed", "Chair", "Table", "Sink", "W.C.", "New"]
   return (
     <div className='shop-page'>
       <Switch>
