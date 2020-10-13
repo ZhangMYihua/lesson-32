@@ -65,6 +65,6 @@ export const ContentContainer = styled.div`
 export const ContentTitle = styled.span`
   // font-weight: bold;
   margin-bottom: 6px;
-  font-size: 40px;
+  font-size: min(max(35px, 3vw), 40px);
   color: white;
 `;
