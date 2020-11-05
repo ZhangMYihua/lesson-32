@@ -47,12 +47,9 @@ const AllProductsPage = ({collection, match}) => {
 const item = collection[0]
 
   return (
-
     <CollectionPageContainer>
-      <CollectionTitle>{match.params.collectionId.toUpperCase()}</CollectionTitle>
-      <CollectionItemsContainer>
+      {/* <CollectionTitle>{match.params.collectionId.toUpperCase()}</CollectionTitle> */}
           <CollectionItem key={collection.id} item={item} />
-      </CollectionItemsContainer>
     </CollectionPageContainer>
   );
 };

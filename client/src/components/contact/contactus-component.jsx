@@ -2,8 +2,9 @@ import React from 'react';
 import {Form, Button} from 'react-bootstrap';
 
 export const ContactUs = () => {
+
     return (
-        <Form>
+        <Form >
         <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="name@gmail.com" />
@@ -20,7 +21,7 @@ export const ContactUs = () => {
             {/* <Form.Label>Tell us more details</Form.Label> */}
             <Form.Control as="textarea" rows="3" />
         </Form.Group>
-            <Button>
+            <Button onClick={() => alert('Form submitted!')}>
                 Submit    
             </Button>
         </Form>

@@ -1,0 +1,8 @@
+.rectangle {
+    width: 100%;
+    height: 400px;
+    background-color: #F0F8FF;
+    align-self: center;
+    opacity: 1;
+    z-index: -1;
+  }

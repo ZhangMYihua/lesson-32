@@ -4,17 +4,18 @@ import CustomButton from '../custom-button/custom-button.component';
 export const CollectionSpecificationsContainer = styled.div`
   display: flex;
   flex-direction: row; 
-  margin-left: 10vw;
-
+  width: 50%;
+  margin: auto;
+  margin-top: 5vh;
 `
 
 export const CollectionItemContainer = styled.div`
-  width: 800px;
-  display: flex;
+  width: 500px;
+  height: 500px;
+  // display: flex;
   flex-direction: column;
-  height: 350px;
-  align-items: center;
-  position: relative;
+  // align-items: center;
+  // position: relative;
 
   &:hover {
     .image {
@@ -58,12 +59,15 @@ export const AddButton = styled(CustomButton)`
 `;
 
 export const BackgroundImage = styled.div`
-  width: 100%;
-  height: 95%;
-  background-size: contain;
-  background-position: center;
+  background-size: 70%;
+  height: 500px;
+  // margin-top: 50px;
+  // background-size: contain;
+  // background-position: center;
   background-repeat: no-repeat;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  z-index: 0
+
 `;
 
 export const CollectionFooterContainer = styled.div`
@@ -87,8 +91,9 @@ export const PriceContainer = styled.span`
 export const SpecDetailsContainer = styled.div`
   display: flex;
   flex-direction: column; 
+  width: 20vw;
   // margin: auto;
-  padding-left: 50px;
+  // padding-left: 50px;
 `
 export const TitleContainer = styled.span`
   width: 300px;
@@ -97,17 +102,17 @@ export const TitleContainer = styled.span`
 `;
 
 export const PriceSideContainer = styled.span`
-  width: 200px;
+  // width: 200px;
   font-size: 25px;
   color: #2F4F4F;
   font-weight: bold;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 `
 
 export const AddButtonv2 = styled(CustomButton)`
   opacity: 1;
-  top: 255px;
-  padding-bottom: 10px;
+  // top: 255px;
+  // padding-bottom: 10px;
 `;
 
 export const ColorContainerSettings = styled.span`
